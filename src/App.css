@@ -1,0 +1,210 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content{
+  display: flex;
+  flex: 1;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #faf6f6;
+  color: black;
+}
+
+.slidebar{
+  width: 20%;
+  background-color: #eee;
+  padding: 1rem;
+}
+
+.main-screen{
+  flex:1;
+  padding: 1rem;
+}
+
+.menubtn {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+.widget{
+  max-height: 300px;
+  min-height: 300px;
+  overflow-y: auto;
+  margin: 5px;
+}
+
+.widgetTable{
+  margin-top: 10px;
+  font-size: 16px;
+  border-collapse: collapse;
+  width:100%;
+  box-shadow: 0 0 20px rgb(201, 241, 220);
+}
+.widget th, .widget td{
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.widget th{
+  background-color: #f5f5f5;
+
+}
+.widget tr:hover{
+  background-color: #f9f9f9;
+}
+
+.body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+h1{
+  color: #333;
+}
+.widget-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.logoimg{
+  width: 300px;
+  height: 35px;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.toggle-switch{
+  width: 60px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.profileImg{
+  height: 200px;
+  width: 200px;
+}
+
+.PfData{
+  margin: 10px;
+  padding: 10px;
+  text-align: left;
+}
+
+.pfplogoimg{
+  width: 180px;
+  height: 30px;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.border{
+  border: 1px;
+  color: black;
+  
+}
+
+/* Calendar.css */
+.calendar {
+  margin: 20px auto;
+  text-align: center;
+  font-size: small;
+  max-height: 300px;
+  min-height: 300px;
+}
+
+.month {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background-color: #eee;
+  padding: 1px;
+}
+
+.days{
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  gap: 1px;
+  border: 1px;
+}
+
+.day {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.day:hover {
+  background-color: #ddd;
+}
+
+.day.selected {
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 50%;
+}
