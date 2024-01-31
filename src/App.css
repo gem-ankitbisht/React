@@ -179,7 +179,7 @@ h1{
 .weekdays {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 1px;
+  gap: 0px;
   background-color: #eee;
   padding: 1px;
 }
@@ -187,7 +187,7 @@ h1{
 .days{
   display: grid;
   grid-template-columns: repeat(7,1fr);
-  gap: 1px;
+  gap: 0px;
   border: 1px;
 }
 

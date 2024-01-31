@@ -3,7 +3,6 @@ import { BrowserRouter as Router,Routes, Route, Link} from 'react-router-dom';
 import MainScreen from "./MainScreen";
 function SlideBar(){
     return(
-        <Router>
             <div className="slidebar">
             Vertical Menu 
             <ul>
@@ -11,10 +10,6 @@ function SlideBar(){
                 <li> <Link to="/UserList"> Users List</Link> </li>
             </ul>
         </div>
-        <Routes>
-         
-        </Routes>
-        </Router>
         
     );
 };

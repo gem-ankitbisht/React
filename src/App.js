@@ -13,19 +13,18 @@ function App() {
       setShowSlidebar(!showSlidebar);
     };
   return (
-    <div className="App">
-      <Navbar toggleSlidebar={toggleSlidebar}/>
-      <div className='content'>
-       {showSlidebar && <SlideBar/>}
-       
-      <Router>
-        <Routes>
-          <Route exact path="/" element={ <MainScreen/>}/>
-          <Route path="/UserList" element={ <UserList/>}/>
-        </Routes>
-      </Router>
+    <Router>
+      <div className="App">
+        <Navbar toggleSlidebar={toggleSlidebar} />
+        <div className="content">
+          {showSlidebar && <SlideBar />}
+          <Routes>
+            <Route exact path="/" element={<MainScreen />} />
+            <Route path="/UserList" element={<UserList />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

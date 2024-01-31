@@ -40,7 +40,7 @@ function UserList(){
                 </thead>
                 <tbody>
                 {profileDetail.map(emp => (
-                            <tr key={emp.Id}>
+                            <tr key={emp.id}>
                                 <td><img src={emp.image} style={{width: '100px'}}></img> </td>
                                 <td>{emp.name}</td>
                                 <td>{emp.status}</td>
