@@ -1,11 +1,20 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import Widget from "./Widget";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ProfileCard from "./ProfileCard";
 import Calendar from "./Calendar";
+import Axios from "axios";
 
 function MainScreen(){
 
+    const [data1, setData] = useState([]);
+    useEffect(()=>{
+        Axios.get('https://rickandmortyapi.com/api/character').then((res)=>{
+        setData(res.data.results);
+        
+    })
+    },[])
+    console.log(data1); 
     const W1data = [
         {id: 1, name: 'Ankit', Designation: 'SEL1'},
         {id: 2, name: 'XYZ', Designation: 'SEL2'}

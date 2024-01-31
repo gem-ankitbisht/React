@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import GM from'./GM.jpg';
+import RM from './Rick.jpg'
 //import Modal from 'react-modal'
 
 function Navbar(props){
@@ -31,7 +32,7 @@ function Navbar(props){
                 <button className="toggle-button navbar-toggler" onClick={toggleSlidebar}>
                 <span className="navbar-toggler-icon"></span>
                 </button>
-                <img src={GM} alt="logo" className="logoimg" />
+                <img src={RM} alt="logo" className="logoimg" />
             </div>
             <div className="profile" >
                  <button onClick={openModal}>Profile</button>
