@@ -1,9 +1,11 @@
 import React,{useState} from "react";
 import GM from'./GM.jpg';
 import RM from './Rick.jpg'
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Modal,Button } from "react-bootstrap";
 //import Modal from 'react-modal'
 
-function Navbar(props){
+const Navbar = (props) => {
     const employee =[]; 
     const {toggleSlidebar} = props;
     const [isModalOpen, setModalOpen] = useState(false);
@@ -29,18 +31,20 @@ function Navbar(props){
     return(
         <div className="navbar">
             <div>
-                <button className="toggle-button navbar-toggler" onClick={toggleSlidebar}>
+                <Button variant="primary" className="toggle-button navbar-toggler" onClick={toggleSlidebar}>
                 <span className="navbar-toggler-icon"></span>
-                </button>
+                </Button>
                 <img src={RM} alt="logo" className="logoimg" />
             </div>
             <div className="profile" >
                  <button onClick={openModal}>Profile</button>
             
-                 {isModalOpen && <modal isOpen={isModalOpen} 
+            <Modal show={isModalOpen}
                 onRequestClose={closeModal}
+                backdrop="static"
                 contentLable = "Employee Detail Modal">
-                    <h2> Employee Details</h2>
+                    <Modal.Header> Employee Details</Modal.Header>
+                    <Modal.Body>
                     <form>
                         <lable>
                             Name:
@@ -66,10 +70,13 @@ function Navbar(props){
                                 value = {editedEmployee.address}
                                 onChange={handelInputChanges}></input>
                         </lable>
-                        <button >save</button>
-                        <button onClick={closeModal}>close</button>
                     </form>
-                </modal>}
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary"> Save</Button>
+                        <Button varity="primary" onClick={closeModal}>Close</Button>
+                    </Modal.Footer>
+                </Modal>
                 </div>
         </div>
     );

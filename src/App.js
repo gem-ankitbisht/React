@@ -6,7 +6,11 @@ import Navbar from './Components/Navbar';
 import SlideBar from './Components/Slidebar';
 import MainScreen from './Components/MainScreen';
 import UserList from './Components/UserList';
-function App() {
+import Locations from './Components/Locations';
+import Episodes from './Components/Episodes'
+
+
+const App = () => {
     const[showSlidebar, setShowSlidebar] = useState(true);
 
     const toggleSlidebar = () =>{
@@ -21,6 +25,9 @@ function App() {
           <Routes>
             <Route exact path="/" element={<MainScreen />} />
             <Route path="/UserList" element={<UserList />} />
+            <Route path="/Locations" element={<Locations />} />
+            <Route path="/Episodes" element={<Episodes />} />
+           
           </Routes>
         </div>
       </div>

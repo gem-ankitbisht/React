@@ -9,7 +9,6 @@ function ProfileCard(){
     const [location, setLocation] = useState("")
     const id = Math.floor(Math.random()*827);
     useEffect(()=>{
-        
         Axios.get('https://rickandmortyapi.com/api/character/'+id).then((res)=>{
         setProfileDetail(res.data)
         setName(res.data.name)

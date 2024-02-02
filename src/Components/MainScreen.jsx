@@ -5,7 +5,8 @@ import ProfileCard from "./ProfileCard";
 import Calendar from "./Calendar";
 import Axios from "axios";
 
-function MainScreen(){
+
+const MainScreen = () => {
 
     const [data1, setData] = useState([]);
     useEffect(()=>{
