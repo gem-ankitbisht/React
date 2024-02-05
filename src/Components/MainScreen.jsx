@@ -3,6 +3,7 @@ import Widget from "./Widget";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ProfileCard from "./ProfileCard";
 import Calendar from "./Calendar";
+import RandMCarousel from "./RickandMortyCarousel";
 import Axios from "axios";
 
 
@@ -39,6 +40,7 @@ const MainScreen = () => {
             <div className="row">
             <ProfileCard></ProfileCard>
             <Calendar></Calendar>
+            <RandMCarousel></RandMCarousel>
             <Widget data = {W1data} Name = 'Employee Details' ></Widget>
             <Widget data = {W2data} Name = 'Birthdays' ></Widget>
             <Widget data = {Refdata} Name = 'Referral' ></Widget>
