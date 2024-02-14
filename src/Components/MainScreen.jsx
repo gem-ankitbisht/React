@@ -36,7 +36,7 @@ const MainScreen = () => {
     ];
 
     return(
-        <div className="main-screen ">
+        <div className="main-screen " style={{overflowY: "scroll", maxHeight:"90vh" }}>
             <div className="row">
             <ProfileCard></ProfileCard>
             <Calendar></Calendar>

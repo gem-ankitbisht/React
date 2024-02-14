@@ -22,7 +22,7 @@ const SlideBar = () =>{
           <Link to="/Episodes"><h5> Episodes</h5></Link>
           </li>
           <li className="nav-item" style={{margin:"20px",textAlign: "left"}}>
-          <Link to="/Datatable"><h5> Datatable</h5></Link>
+          <Link to="/SearchById"><h5> Search Character</h5></Link>
           </li>
           </ul>
         </div> 

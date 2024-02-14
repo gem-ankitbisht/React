@@ -64,11 +64,12 @@ const RandMCarousel = () => {
 
   const chunckedCharacter = chunckArrat(characters, 4);
   return (
+    <div className="col-md-12" style={{backgroundColor: "grey"}}>
     <Carousel nextLabel="" prevLabel="" indicators={false}>
       {chunckedCharacter.map((chunck, index) => (
         <Carousel.Item key={index}>
           <Container>
-          <div className="row" style={{margin: "0px"}}>
+          <div className="row" style={{margin: "10px"}}>
             <Row style={{margin:"0px"}}>
               {chunck.map((character) => (
                 <div className="col-md-3" key={character.id}>
@@ -87,6 +88,7 @@ const RandMCarousel = () => {
         </Carousel.Item>
       ))}
     </Carousel>
+    </div>
 
   );
 };
