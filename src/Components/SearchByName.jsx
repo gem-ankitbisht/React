@@ -3,26 +3,27 @@ import Axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, Button } from "react-bootstrap";
 import UserDataDashboard from "./UserDataDashboard";
+import UserDataDashboardName from "./UserDataDashboardName";
 
-const SearchById = () => {
+const SearchByName = () => {
   const [profileDetail, setProfileDetail] = useState([]);
-  const [userDetail, setUserDetail] = useState(1);
+  const [userDetail, setUserDetail] = useState("");
   const [isModalOpen, setUserModalOpen] = useState(false);
   const [userid, setuserid] = useState(1);
   const openModal = () => {
     const searchid = document.getElementById("searchid").value;
     setuserid(searchid);
     debugger
-    if(searchid < 1){
-      alert("please enter value greater than 0")
+    if(searchid == "  "){
+      alert("please enter a name")
       return
     }
     else if(searchid == ""){
-      alert("please enter a id")
+      alert("please enter a Name")
       return
     }
-    else if(!isNumber(searchid)){
-      alert("please enter number only")
+    else if(isNumber(searchid)){
+      alert("please do not enter number ")
       return
     }
     setUserModalOpen(true);
@@ -50,7 +51,7 @@ const SearchById = () => {
       className="container card overflow-auto main-screen"
       style={{ width: "100vw", height: "100vh" }}
     >
-      <h2>Search Character List By Id</h2>
+      <h2>Character List</h2>
       <hr></hr>
       <div className="card">
         <input typeof="text" id="searchid" ></input>
@@ -66,9 +67,9 @@ const SearchById = () => {
         backdrop="static"
         contentLable="Employee Detail Modal"
       >
-        <Modal.Header> Character Details</Modal.Header>
+        <Modal.Header> Search Character Details By Name</Modal.Header>
         <Modal.Body>
-          <UserDataDashboard id={userid}></UserDataDashboard>
+          <UserDataDashboardName id={userid}></UserDataDashboardName>
         </Modal.Body>
         <Modal.Footer>
           <Button varity="primary" onClick={closeUserModal}>
@@ -80,4 +81,4 @@ const SearchById = () => {
   );
 };
 
-export default SearchById;
+export default SearchByName;

@@ -9,6 +9,7 @@ import UserList from "./Components/UserList";
 import Locations from "./Components/Locations";
 import Episodes from "./Components/Episodes";
 import SearchById from "./Components/SearchById";
+import SearchByName from "./Components/SearchByName";
 
 const App = () => {
   const [showSlidebar, setShowSlidebar] = useState(true);
@@ -28,6 +29,7 @@ const App = () => {
             <Route path="/Locations" element={<Locations />} />
             <Route path="/Episodes" element={<Episodes />} />
             <Route path="/SearchById" element={<SearchById />} />
+            <Route path="/SearchByName" element={<SearchByName />} />
           </Routes>
         </div>
       </div>
