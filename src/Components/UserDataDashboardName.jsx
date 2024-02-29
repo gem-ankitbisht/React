@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import UserDataDashboard from "./UserDataDashboard";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Modal, Button } from "react-bootstrap";
 
 const UserDataDashboardName = (props) => {
   const [id, setid] = useState(props.id);
@@ -43,7 +45,7 @@ const UserDataDashboardName = (props) => {
     <>
     <div
       className="container card overflow-auto main-screen"
-      style={{ width: "30vw", height: "80vh" }}
+      style={{ width: "30vw", height: "70vh" }}
     >
       <h2>Character List</h2>
       <hr></hr>
@@ -78,7 +80,22 @@ const UserDataDashboardName = (props) => {
           </tbody>
         </table>
     </div>
-
+    <Modal
+        show={isModalOpen}
+        onRequestClose={closeUserModal}
+        backdrop="static"
+        contentLable="Employee Detail Modal"
+      >
+        <Modal.Header> Character Details</Modal.Header>
+        <Modal.Body>
+          <UserDataDashboard id={userDetail}></UserDataDashboard>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button varity="primary" onClick={closeUserModal}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
       {/* <div className="card">
         <div class="card-body">
           <h5 class="card-title">{name}</h5>
